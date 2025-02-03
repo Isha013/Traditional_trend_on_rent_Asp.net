@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="chaniyacholi.Site1Master" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Your Site Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+             /* Header Section */
+    .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 90px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #800000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.user-icon {
+    font-size: 24px;
+    color: #800000;
+}
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="logo">
+                <img src="Images/logo.png" alt="Logo" />
+            </div>
+            <div class="nav">
+                <a href="homepage.aspx">Home</a>
+                <a href="OurStory.aspx">Our Story</a>
+                <a href="team.aspx">Our Team</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="user-icon">
+                <a href="Register.aspx" style="text-decoration: none; color: maroon;">👤</a>
+            </div>
+        </div>
+
+        <!-- Content Placeholder -->
+        <asp:ContentPlaceHolder id="MainContent" runat="server" />
+    </form>
+</body>
+</html>
