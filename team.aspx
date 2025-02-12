@@ -125,7 +125,7 @@
              <a href="#" class="fab fa-linkedin-in"></a>  
             </div>
         </div>
-
+        
         <!-- Team Member 3 -->
         <div class="team-member">
             <div class="profile-image">
