@@ -40,6 +40,89 @@
     font-size: 24px;
     color: #800000;
 }
+/*footer*/
+.footer {
+    background-color: #800020;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffcccb;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #5e0014;
+}
+
+.footer-bottom nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-bottom nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ffcccb;
+}
+
 
     </style>
 </head>
@@ -64,5 +147,49 @@
         <!-- Content Placeholder -->
         <asp:ContentPlaceHolder id="MainContent" runat="server" />
     </form>
+    <!--footer -->
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>CONTACT ME</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>CUSTOMER CARE</h3>
+            <ul>
+                <li><a href="#">After-Sales Service</a></li>
+                <li><a href="#">Product Information</a></li>
+                <li><a href="#">Support Services</a></li>
+                <li><a href="#">Feedback Mechanism</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>MORE EXPLORE</h3>
+            <ul>
+                <li><a href="#">Cultural Sensitivity and Personalization</a></li>
+                <li><a href="#">Building Relationships</a></li>
+                <li><a href="#">Product Guidance</a></li>
+                <li><a href="#">Problem Resolution</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <nav>
+            <a href="#">HOME</a> | 
+            <a href="#">WE DELI IN</a> | 
+            <a href="#">OUR STORY</a> | 
+            <a href="#">GALLERY</a> | 
+            <a href="#">OUR TEAM</a> | 
+            <a href="#">CONTACT US</a>
+        </nav>
+        <p>© THE WEBSITE IS DEVELOPED BY JAY, ISHA, UMANGI</p>
+    </div>
+</footer>
+
 </body>
 </html>

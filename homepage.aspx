@@ -1,6 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="chaniyacholi.homepage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="homepage.aspx.cs" Inherits="chaniyacholi.homepage"%>
+
+
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Traditional Trend of Rent</title>
@@ -8,11 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
         /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+       body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+       .content {
+    flex: 1;
+}
+
+
 
         /* Header Section */
         .header {
@@ -185,78 +194,57 @@
         /* Team Section (WebForm1 Content) */
 
        
-        .team-section {
-            background-color: #fff;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 0px;
+       .team-section {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 0px;
+    width: 100%; /* Make it span the full width */
+    max-width: 100vw; /* Ensure it doesn’t exceed the viewport width */
+}
 
-        }
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 80px;
+    width: 100%; /* Full width */
+}
 
-        .team-section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #800020;
-            font-family: 'Georgia', serif;
+.team-member {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 350px; /* Increase width */
+    width: 100%; /* Make sure it adjusts responsively */
+}
 
+.team-member img {
+    width: 180px; /* Increase image size */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
-        }
+.team-member h3 {
+    font-size: 24px; /* Slightly larger font */
+    margin: 10px 0;
+}
 
-        .team-section p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 40px;
-            text-align: center;
-        }
+.social-icons a {
+    margin: 0 10px;
+    color: #555;
+    font-size: 22px; /* Bigger icons */
+    text-decoration: none;
+}
 
-        .team-members {
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-        }
+.social-icons a:hover {
+    color: #800000;
+}
 
-        .team-member {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 300px;
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .team-member h3 {
-            font-size: 22px;
-            margin: 10px 0;
-        }
-
-        .team-member span {
-            font-size: 16px;
-            color: #888;
-        }
-
-        .social-icons {
-            margin-top: 10px;
-        }
-
-        .social-icons a {
-            margin: 0 5px;
-            color: #555;
-            font-size: 20px;
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            color: #800000;
-        }
 /*       rental process */
          .body{
                 
@@ -333,6 +321,114 @@
             border-radius: 50%;
             margin-right: 12px;
         }
+        /*whatsapp*/
+        .whatsapp-button {
+    display: inline-block;
+    background-color: #800020;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.whatsapp-button:hover {
+    background-color: #5a3570;
+}
+/*footer*/
+
+.footer {
+    background-color: #D9D9D9;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #7B273B;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #7B273B;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #7B273B;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #7B273B;
+}
+
+.footer-bottom {
+    margin-top: 50px;  /* Increased margin to push it down */
+    padding: 20px 0;  /* Added more padding */
+    background-color: #5e0014;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-bottom nav {
+    margin-bottom: 10px; /* Space between links and copyright */
+}
+
+.footer-bottom nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-bottom nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #ffcccb;
+    margin-top: 5px;  /* Increased space */
+    padding-bottom: 5px; /* Extra space at the bottom */
+}
+
     </style>
 </head>
 <body>
@@ -449,7 +545,7 @@
     <!-- Story Section -->
     <div class="story-section">
         <div class="story-image">
-            <img src="Images/story.png" alt="Our Story Image" />
+            <img src="Images/red.png" alt="Our Story Image" />
         </div>
         <div class="story-content">
             <div class="story-title">Our Story</div>
@@ -503,5 +599,62 @@
         </div>
     </div>
 </div>
+    <!--chat on whatsapp section -->
+     <div style="text-align: center; padding: 20px;">
+        <p>Welcome to our Fashion Universe. Good to see you on our fashion world. 
+           We also do C2C. If you want to give a particular product on rent, just 
+           let us know through the WhatsApp number. After that, we will put it on 
+           our website and give customers to rent. We will take care of your product. 
+           That will be in our T&C. We will send you T&C of yours also.</p>
+
+        <a href="https://wa.me/919876543210?text=Hello!%20I%20want%20to%20rent%20my%20product" 
+           class="whatsapp-button" 
+           target="_blank">
+            CHAT ON WHATSAPP
+        </a>
+    </div>
+        <!--footer -->
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>CONTACT ME</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>CUSTOMER CARE</h3>
+            <ul>
+                <li><a href="#">After-Sales Service</a></li>
+                <li><a href="#">Product Information</a></li>
+                <li><a href="#">Support Services</a></li>
+                <li><a href="#">Feedback Mechanism</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>MORE EXPLORE</h3>
+            <ul>
+                <li><a href="#">Cultural Sensitivity and Personalization</a></li>
+                <li><a href="#">Building Relationships</a></li>
+                <li><a href="#">Product Guidance</a></li>
+                <li><a href="#">Problem Resolution</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <nav>
+            <a href="#">HOME</a> | 
+            <a href="#">WE DELI IN</a> | 
+            <a href="#">OUR STORY</a> | 
+            <a href="#">OUR TEAM</a> | 
+            <a href="#">CONTACT US</a>
+        </nav>
+        <p>© THE WEBSITE IS DEVELOPED BY JAY, ISHA, UMANGI</p>
+    </div>
+
+</footer>
 </body>
 </html>
